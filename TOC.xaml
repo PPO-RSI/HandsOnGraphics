@@ -1,0 +1,97 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity">
+
+    <DataTemplate x:Key="TOC">
+        <TreeView>
+            <TreeViewItem Header="Views" FontSize="14">
+                <TreeViewItem Header="Home" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="HomeScreen" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Overview" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="OverviewScreen" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Process" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="ProcessScreen" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="SynopticPPO170118" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="SynopticPP0170118" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Trend1" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="Trend1" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="RefluxTrend" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="MyTrendPPO170118" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="ESD" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="ESDScreen" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="Specific" FontSize="14">
+                <TreeViewItem Header="Trend" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="TrendScreen" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Control Group" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="ControlGroupScreen" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Control Scheme" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="ControlSchemeScreen" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Profile" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="ProfileScreen" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+                <TreeViewItem Header="Report" FontSize="12">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="MouseUp">
+                            <LinkTriggerAction WindowName="ReportScreen" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+    </DataTemplate>
+</ResourceDictionary>

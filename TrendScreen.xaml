@@ -1,0 +1,59 @@
+﻿<RSIMimic
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:local="clr-namespace:PPO170117_2" x:Class="PPO170117_2.TrendScreen"
+          Background="LightGray"
+          Height="1048"
+          Width="1920"
+          mc:Ignorable="d">
+
+    <local:Trend >
+        <local:Trend.Parameters>
+            <!-- Example of parameters -->
+            <!--
+            <Param Name="$TAGNAME1" Value="TT03"/>
+            <Param Name="$TAGLABEL1" Value="Column Temp"/>
+
+            <Param Name="$TAGNAME2" Value="AT01"/>
+            <Param Name="$TAGLABEL2" Value="AT01"/>
+
+            <Param Name="$TAGNAME3" Value="AT02"/>
+            <Param Name="$TAGLABEL3" Value="AT02"/>
+
+            <Param Name="$TAGNAME4" Value="FT01"/>
+            <Param Name="$TAGLABEL4" Value="FT01"/>
+
+            <Param Name="$TAGNAME5" Value="FT03"/>
+            <Param Name="$TAGLABEL5" Value="FT03 "/>
+
+            <Param Name="$TAGNAME6" Value="FT05"/>
+            <Param Name="$TAGLABEL6" Value="FT05 "/>
+
+            <Param Name="$TAGNAME7" Value="LT02"/>
+            <Param Name="$TAGLABEL7" Value="LT02 "/>
+
+            <Param Name="$TAGNAME8" Value="PT01"/>
+            <Param Name="$TAGLABEL8" Value="PT01 "/>
+            -->
+            <Param Name="$TAGNAME1" Value="LT02"/>
+            <Param Name="$TAGLABEL1" Value="DRUM LEVEL"/>
+            <Param Name="$MIN1" Value="LT02.LowerRange"/>
+            <Param Name="$MAX1" Value="LT02.UpperRange"/>
+            <Param Name="$VALUE1" Value="LT02.Value"/>
+            <Param Name="$UNIT1" Value="LT02.Value.Unit"/>
+            <Param Name="$TAGNAME2" Value="PT01"/>
+            <Param Name="$TAGLABEL2" Value="TOWER PRESSURE"/>
+            <Param Name="$MIN2" Value="PT01.LowerRange"/>
+            <Param Name="$MAX2" Value="PT01.UpperRange"/>
+            <Param Name="$VALUE2" Value="PT01.Value"/>
+            <Param Name="$UNIT2" Value="PT01.Value.Unit"/>
+            <Param Name="$TAGNAME3" Value="TT01"/>
+            <Param Name="$TAGLABEL3" Value="REFLUX DRUM TEMPERATURE"/>
+            <Param Name="$TAGNAME4" Value="FT03"/>
+            <Param Name="$TAGLABEL4" Value="REFLUX FLOWRATE"/>
+        </local:Trend.Parameters>
+    </local:Trend>
+
+</RSIMimic>

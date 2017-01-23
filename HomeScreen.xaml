@@ -1,0 +1,110 @@
+﻿<RSIMimic
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+          xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" xmlns:local="clr-namespace:PPO170117_2" x:Class="PPO170117_2.HomeScreen"
+          Background="LightGray"
+	      Height="1048"
+          Width="1920"
+          mc:Ignorable="d">
+    <RSICanvas>
+        <!-- Graphic -->
+        <TextBlock FontSize="72"
+                   Text="HomeScreen" />
+
+        <!--  FOD Part  -->
+        <RSICanvas x:Name="FOD"
+                Visibility="{FODBinding}">
+            <Path Data="M1095,795 L1095,959.5 1354.5,959.5" Height="167.5" Canvas.Left="1094" Stretch="Fill" Stroke="#FF1180DA" StrokeThickness="3" Canvas.Top="794" Width="262.5"/>
+            <RSI_ControlValve Canvas.Left="1205" Canvas.Top="927" d:LayoutOverrides="Width, Height" ModelName="CV09"/>
+            <RSIText x:Name="rSIText2" Canvas.Left="1390" TextWrapping="Wrap" Text="Drain" Canvas.Top="915" FontSize="36"/>
+        </RSICanvas>
+
+        <!--  Battery Limit Part  -->
+        <RSICanvas x:Name="BL"
+                Visibility="{BLBinding}" d:IsLocked="True"/>
+
+        <!--  FAILURE Part  -->
+        <RSICanvas x:Name="FAILURE"
+                Visibility="{FAILUREBinding}" d:IsLocked="True"/>
+        <Path Data="M122.5,0.5 C185.66759,0.5 237.62251,23.716486 243.87012,53.467598 L244.03619,54.372004 244.5,54.372004 244.5,59.500001 244.5,481.58999 244.5,483.372 244.42033,483.372 244.34126,485.14071 C241.07371,521.59826 187.77315,550.59002 122.5,550.59002 57.226836,550.59002 3.9262851,521.59826 0.65874273,485.14074 L0.57966727,483.372 0.5,483.372 0.5,481.59002 0.5,59.500001 0.5,54.372004 0.9638015,54.372004 1.1298723,53.467598 C7.3774904,23.716486 59.332434,0.5 122.5,0.5 z" Fill="#FFB2B4B4" Height="551.09" Canvas.Left="975" Stretch="Fill" Stroke="Black" Canvas.Top="246.128" Width="245"/>
+        <Path Data="M385,245 L804.5,245 804.5,479.5 974.5,479.5" Height="235.5" Canvas.Left="384.5" Stretch="Fill" Canvas.Top="246.128" Width="590.5" StrokeThickness="5" Stroke="Black"/>
+        <RSI_Pump Canvas.Left="783.5" Canvas.Top="855" d:LayoutOverrides="Width, Height" ModelName="P01" MotorActuatorName="M_P01" Orientation="West"/>
+        <Path Data="M1050,785 L1050,884.5 879.5,884.5" Height="102.5" Canvas.Left="878.5" Stretch="Fill" Stroke="#FFBC11DA" StrokeThickness="3" Canvas.Top="784" Width="173.5"/>
+        <Path Data="M780,865 L319.5,865 319.5,724.5 234.5,724.5" Height="143.5" Canvas.Left="233.5" Stretch="Fill" Stroke="#FFBC11DA" StrokeThickness="3" Canvas.Top="723.5" Width="548.5"/>
+        <RSI_ControlValve Canvas.Left="189.833" Canvas.Top="690" d:LayoutOverrides="Height"/>
+        <Path Data="M190,720" Height="3" Canvas.Left="189" Stretch="Fill" Stroke="#FF1180DA" StrokeThickness="3" Canvas.Top="719" Width="3"/>
+        <Path Data="M190,725 L119.5,725" Height="3" Canvas.Left="118.5" Stretch="Fill" Stroke="#FFBC11DA" StrokeThickness="3" Canvas.Top="724" Width="73.5"/>
+        <Path Data="M400,870" Height="3" Canvas.Left="399" Stretch="Fill" Stroke="#FF1180DA" StrokeThickness="3" Canvas.Top="869" Width="3"/>
+        <Path Data="M400,865 L400,999.5 1599.5,999.5" Height="137.5" Canvas.Left="399" Stretch="Fill" Stroke="#FFBC11DA" StrokeThickness="3" Canvas.Top="864" Width="1202.5"/>
+        <RSI_ControlValve Canvas.Left="1601" Canvas.Top="966" d:LayoutOverrides="Width, Height"/>
+        <RSIText x:Name="rSIText" Height="48.5" Canvas.Left="1720" TextWrapping="Wrap" Text="Distillate" Canvas.Top="934.5" Width="140" FontSize="36"/>
+        <RSILine Height="100" Canvas.Left="1646.5" Stroke="#FFBC11DA" StrokeThickness="3" Canvas.Top="900.5" Width="100" ArrowEndStyle="Triangle" RenderTransformOrigin="0.5,0.5" Fill="#FFBC11DA">
+            <RSILine.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="180.714"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </RSILine.RenderTransform>
+        </RSILine>
+        <RSI_StdGauge Canvas.Left="1172" Canvas.Top="632" d:LayoutOverrides="Width, Height" ModelName="D01" ParameterName="TotalLiquidLevelPrc"/>
+        <RSI_StdTransmitter Canvas.Left="1530.5" Canvas.Top="627" d:LayoutOverrides="Width, Height" ModelName="LT02"/>
+        <RSILine Height="100" Canvas.Left="1225" Stroke="Black" Canvas.Top="635" Width="305" StrokeThickness="1" LineStyle="Dash"/>
+        <RSILine Height="318.5" Canvas.Left="1619.5" Stroke="Black" StrokeThickness="1" Canvas.Top="647.5" Width="100" Orientation="Vertical" LineStyle="Dot"/>
+        <RSI_StdTransmitter Canvas.Left="975" Canvas.Top="106" ModelName="TT01" FontSize="24" Height="30" Width="98.033"/>
+        <RSIText x:Name="rSIText1" Canvas.Left="996.5" TextWrapping="Wrap" Text="TT01" Canvas.Top="155" FontSize="36"/>
+        <RSILine Height="125" Canvas.Left="1125" Stroke="Black" StrokeThickness="1" Canvas.Top="120" Width="65" Orientation="Vertical" LineStyle="Dot"/>
+        <RSILine Height="77.883" Canvas.Left="1076" Stroke="Black" StrokeThickness="1" Canvas.Top="125" Width="49" LineStyle="Dot"/>
+        <local:HeatExchanger_PPO100117 Canvas.Left="267" Canvas.Top="187.5" Height="120" Width="120" TagName="E01">
+            <local:HeatExchanger_PPO100117.Parameters>
+                <Param Name="$Var1" Value="NominalTubeSideHeatExchangeCoeff"/>
+            </local:HeatExchanger_PPO100117.Parameters>
+            <local:HeatExchanger_PPO100117.Animations>
+                <ClickAnimation>
+                    <Open CanResize="True" Title="Heat Echanger Details" WindowName="FaceplateHeatExchanger170118"/>
+                </ClickAnimation>
+            </local:HeatExchanger_PPO100117.Animations>
+        </local:HeatExchanger_PPO100117>
+        <RSIButton x:Name="rSIButton" Content="Go to local Panel" Canvas.Left="267" Canvas.Top="481.628" FontSize="18">
+            <RSIButton.Animations>
+                <ClickAnimation>
+                    <Link WindowName="SynopticPP0170118"/>
+                </ClickAnimation>
+            </RSIButton.Animations>
+        </RSIButton>
+        <RSIButton x:Name="rSIButton1" Content="Set SP to 60%" Canvas.Left="1650.5" Canvas.Top="624" Height="23.5" Width="84.5">
+            <RSIButton.Animations>
+                <ClickAnimation>
+                    <Assignment Expression="60" Variable="LC02.SP"/>
+                </ClickAnimation>
+            </RSIButton.Animations>
+        </RSIButton>
+        <RSIRectangle Height="100" Canvas.Left="1660" Stroke="Black" Canvas.Top="680" Width="20" StrokeThickness="3">
+            <RSIRectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.149"/>
+                    <GradientStop Color="White" Offset="0.851"/>
+                </LinearGradientBrush>
+            </RSIRectangle.Fill>
+        </RSIRectangle>
+        <RSIRectangle Fill="#FF0606F7" Height="100" Canvas.Left="1660" Stroke="Black" Canvas.Top="680" Width="20">
+            <RSIRectangle.Animations>
+                <Animation>
+                    <Resize Expression="LT02.Value"/>
+                </Animation>
+                <Animation Condition="LT02.Value&gt;60">
+                    <ChangeColor Color="red"/>
+                </Animation>
+            </RSIRectangle.Animations>
+        </RSIRectangle>
+        <RSI_GateValve Canvas.Left="570" Canvas.Top="585" d:LayoutOverrides="Width, Height" Style="{DynamicResource RSI_GateValveStylePPO170119}"/>
+        <RSI_GateValve Canvas.Left="420" Style="{DynamicResource RSI_GateValveStylePPO170119}" Canvas.Top="536.568" d:LayoutOverrides="Width, Height" ColorOpen="#FF0C57ED" ColorClose="#FFEF11F0" ModelName="A_FOD01"/>
+        <RSI_Pump Canvas.Left="530" Canvas.Top="455" d:LayoutOverrides="Width, Height" ModelName="" Style="{DynamicResource RSI_PumpStylePPO170119}" FlowDirection="RightToLeft"/>
+        <RSI_Pump Canvas.Left="365" Style="{DynamicResource RSI_PumpStylePPO170119}" Canvas.Top="415" d:LayoutOverrides="Width, Height" ColorStart="#FF005FFF" ColorStop="#FFD768D7" ModelName="P01" FlowDirection="RightToLeft"/>
+    </RSICanvas>
+</RSIMimic>

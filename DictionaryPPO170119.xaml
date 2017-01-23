@@ -1,0 +1,64 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:PPO170117_2">
+    <Style x:Key="RSI_GateValveStylePPO170119" TargetType="{x:Type RSI_GateValve}">
+        <Setter Property="Width" Value="45"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RSI_GateValve}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Path x:Name="path" Data="M0,0L1,1 1,0 0,1z" Fill="{TemplateBinding CurrentColor}" RenderTransformOrigin="0.5,0.5" Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}"/>
+                        <Flash x:Name="Flash" HorizontalAlignment="Right" Margin="-10" Visibility="Visible" VerticalAlignment="Top" Visitor="{Binding RelativeSource={RelativeSource TemplatedParent}}"/>
+                        <RSIRectangle Fill="{TemplateBinding CurrentColor}" Margin="14,5,16,5" Stroke="Black"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Orientation" Value="East">
+                            <Setter Property="RenderTransform" TargetName="path">
+                                <Setter.Value>
+                                    <RotateTransform Angle="90"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="Orientation" Value="West">
+                            <Setter Property="RenderTransform" TargetName="path">
+                                <Setter.Value>
+                                    <RotateTransform Angle="-90"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ColorOpen" Value="#FF808286"/>
+        <Setter Property="ColorClose" Value="#FFF01111"/>
+    </Style>
+    <Style x:Key="RSI_PumpStylePPO170119" TargetType="{x:Type RSI_Pump}">
+        <Setter Property="Width" Value="90"/>
+        <Setter Property="Height" Value="60"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RSI_Pump}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Path x:Name="ellipse" Data="M380.46484,556.50586C371.62829,556.50586 364.46484,562.32616 364.46484,569.50586 364.46484,574.00915 367.28287,577.97567 371.56445,580.30859L371.80719,580.44252 366.60742,587.54102 394.82227,587.45122 389.41992,580.27935C393.67029,577.94244 396.46484,573.98968 396.46484,569.50591 396.46484,567.82317 396.06983,566.21429 395.35352,564.73833L395.23633,564.50591 406.96484,564.50591 406.96484,556.50591 380.96484,556.50591 380.96484,556.51191 380.87694,556.50991C380.73971,556.50691,380.6029,556.50591,380.46483,556.50591z" Fill="{Binding MotorActuator.CurrentColor, RelativeSource={RelativeSource TemplatedParent}}" Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}"/>
+                        <Path x:Name="shapePart" Data="M16.535159,3.9941387C9.9077425,3.9941387 4.5351591,8.0235767 4.5351591,12.99414 4.5351591,17.964702 9.9077425,21.994139 16.535159,21.994139 23.162577,21.994139 28.535159,17.964702 28.535159,12.99414 28.535159,8.0235767 23.162577,3.9941387 16.535159,3.9941387z M16.5,0.5C16.63806,0.50004959,16.77487,0.50104904,16.9121,0.5040493L16.999999,0.50605011 16.999999,0.50004959 42.999999,0.50004959 42.999999,8.5000496 31.271489,8.5000496 31.38868,8.7324696C32.104989,10.208429 32.499999,11.817309 32.499999,13.50005 32.499999,17.983819 29.70545,21.936579 25.45508,24.273489L30.85743,31.445359 2.64258,31.535159 7.8423495,24.436659 7.5996094,24.302729C3.3180294,21.969809 0.5,18.003289 0.5,13.499999 0.5,6.3202991 7.6634498,0.5 16.5,0.5z" Fill="{Binding MotorActuator.CurrentColor, RelativeSource={RelativeSource TemplatedParent}}" Stretch="Fill" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}"/>
+                        <Flash FailureSource="{Binding MotorActuator.Unit, RelativeSource={RelativeSource TemplatedParent}}" HorizontalAlignment="Right" Margin="0,-10,-10,0" Visibility="Visible" VerticalAlignment="Top" Visitor="{Binding RelativeSource={RelativeSource TemplatedParent}}"/>
+                        <RSIEllipse Fill="{Binding MotorActuator.CurrentColor, RelativeSource={RelativeSource TemplatedParent}}" Margin="16,12,39,23" Stroke="Black"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Orientation" Value="West">
+                            <Setter Property="Data" TargetName="ellipse" Value="M26.999999,0.5C35.83655,0.5 43,6.3203008 43,13.500001 43,18.003291 40.181969,21.969811 35.900389,24.302732L35.65765,24.436662 40.85742,31.535162 12.642569,31.445362 18.044919,24.273492C13.794549,21.936582 10.999999,17.983822 10.999999,13.500051 10.999999,11.817311 11.395009,10.208431 12.111319,8.7324707L12.228509,8.5000511 0.5,8.5000511 0.5,0.50005054 26.499999,0.50005054 26.499999,0.50605011 26.587899,0.50405025C26.725129,0.50105,26.861939,0.50005054,27.00001,0.50005054z"/>
+                            <Setter Property="Data" TargetName="shapePart" Value="M26.96484,3.9941384C20.337422,3.9941385 14.96484,8.0235765 14.96484,12.99414 14.96484,17.964702 20.337422,21.994139 26.96484,21.994139 33.592257,21.994139 38.964842,17.964702 38.964842,12.99414 38.964842,8.0235765 33.592257,3.9941385 26.96484,3.9941384z M27,0.5C35.83655,0.5 42.999998,6.3202989 42.999998,13.499999 42.999998,18.003289 40.181971,21.969809 35.900391,24.302729L35.65765,24.436659 40.85742,31.535159 12.642569,31.445359 18.044919,24.273489C13.794549,21.936579 11,17.983819 11,13.50005 11,11.817309 11.39501,10.208429 12.111319,8.7324696L12.22851,8.5000491 0.5,8.5000491 0.5,0.50004911 26.5,0.50004911 26.5,0.50604963 26.587898,0.5040493C26.72513,0.50104904,26.861938,0.50004959,27,0.5z"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
