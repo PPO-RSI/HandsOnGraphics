@@ -131,5 +131,12 @@
         </RSILine>
         <RSILine Height="100" Canvas.Left="1385.632" Stroke="Black" StrokeThickness="1" Canvas.Top="69.892" Width="80" LineStyle="Dot"/>
         <RSI_StdTransmitter Canvas.Left="1465.632" Canvas.Top="62.726" d:LayoutOverrides="Width" ModelName="PT01"/>
+        <RSILine Height="60" Canvas.Left="325.881" Canvas.Top="307.82" Width="100" Orientation="Vertical" Stroke="Blue" StrokeThickness="2"/>
+        <RSILine Height="100" Canvas.Left="131.897" Stroke="Blue" StrokeThickness="2" Canvas.Top="367.82" Width="196"/>
+        <RSILine Height="80" Canvas.Left="325.881" Stroke="Red" StrokeThickness="2" Canvas.Top="107.844" Width="100" Orientation="Vertical"/>
+        <RSILine Height="100" Canvas.Left="326" Stroke="Red" StrokeThickness="2" Canvas.Top="106.344" Width="300"/>
+        <RSIText x:Name="rSIText4" Canvas.Left="35" TextWrapping="Wrap" Canvas.Top="307.82" FontSize="22" Text="COOLING WATER &#xD;&#xA;SUPPLY" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+        <RSIText x:Name="rSIText5" Canvas.Left="669.633" TextWrapping="Wrap" Text="Cooling Water &#xD;&#xA;Return" Canvas.Top="84.104" FontSize="22" FontWeight="Bold"/>
+        <RSILine Height="100" Canvas.Left="67.336" Stroke="Black" StrokeThickness="5" Canvas.Top="246.128" Width="200" ArrowStartStyle="Normal"/>
     </RSICanvas>
 </RSIMimic>
